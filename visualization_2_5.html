@@ -1,0 +1,156 @@
+<!doctype html>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<!--bootstrap environment-->
+<html lang="kr">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/style.css">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="home.html">TrafficData</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        AllProject
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">설민욱_HW2</a>
+                        <a class="dropdown-item" href="#">설민욱_HW3</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">권태양_HW2</a>
+                          <a class="dropdown-item" href="#">권태양_HW3</a>
+                      </div>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link disabled" href="review.html" tabindex="-1" aria-disabled="true">Other</a>
+                    </li>
+                  </ul>
+                  <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                  </form>
+                </div>
+              </nav>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/style.css">
+<meta charset="utf-8">
+		<title>데이터시각화 HW4 review data</title>
+		<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+		<style>
+			svg { width: 600px; height: 600px; border: 1px solid black; }
+			circle { stroke: none; opacity : 0.5; }
+			text { font-size: 10pt; text-anchor: middle; fill: black; font-weight: bolder; opacity: 0; }
+		</style>
+  </head>
+<body>
+<div class="container">
+    <div class="row">
+		<svg id="myGraph"></svg>
+		<script>
+    var svgWidth = 600;	// SVG요소의 넓이
+    var svgHeight = 600;	// SVG요소의 높이
+    // 데이터셋
+    var dataSet = {
+      name : "전국", value : 51607,
+      children : [
+        { name : "강원", value : 1521 },
+        { name : "경기", value : 13031 },
+        { name : "경남", value : 3356 },
+        { name : "경북", value : 2674 },
+				{ name : "광주", value : 1493 },
+				{ name : "대구", value : 2450 },
+				{ name : "대전", value : 1518},
+				{ name : "부산", value : 3400},
+				{ name : "서울", value : 9705 },
+				{ name : "세종", value : 304},
+				{ name : "울산", value : 1154 },
+				{ name : "인천", value : 2939},
+				{ name : "전남", value : 1790 },
+				{ name : "전북", value : 1820 },
+				{ name : "제주", value : 653},
+				{ name : "충남", value : 2180 },
+				{ name : "충북", value : 1619},
+      ]
+    }
+    // 색을 준비
+    var color = d3.scale.category10();  // 10색을 지정
+    // 팩 레이아웃
+    var bubble = d3.layout.pack()
+      .size([600, 600])	// 표시 크기 지정
+    // 팩 레이아웃으로 사용할 크룹을 작성
+    var pack = d3.select("#myGraph")
+      .selectAll("g")
+      .data(bubble.nodes(dataSet))	// 데이터셋을 요소에 설정
+      .enter()
+      .append("g")
+      .attr("transform", function(d, i){
+        return "translate(" + d.x + "," + d.y + ")";	// X, Y 좌표 설정
+      })
+    // 원 생성
+    pack.append("circle")	// circle 요소를 추가
+      .attr("r", 0)	// 최초 반지름은 0으로 함
+      .transition()
+      .attr("r", function(d){	// 반지름 지정
+        return d.r;
+      })
+      .style("fill", function(d, i){
+        return color(i);
+      })
+    // 원에 표시할 문자 생성
+    pack.append("text")
+      .transition()
+      .style("opacity", 1.0)	// 불투명으로 함
+      .text(function(d, i){
+        if (d.depth == 1){	// 제1계층(도도부현)의 대상
+          return [d.name, (d.value/51607*100).toFixed(0) + '%'];	// name 속성의 내용을 반환
+        }
+        return null;	// 제1계층 이외는 표시하지 않음
+      })
+
+
+
+    </script>
+        </div>
+    </div>
+<br>
+<div class="container">
+<a href="review.html" class="btn btn-primary">Back to review</a>
+  </div>
+	</body>
+  <br>
+    <br>
+    <br>
+    <br>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,189 @@
+<!doctype html>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<!--bootstrap environment-->
+<html lang="kr">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/style.css">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="home.html">TrafficData</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        AllProject
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">설민욱_HW2</a>
+                        <a class="dropdown-item" href="#">설민욱_HW3</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">권태양_HW2</a>
+                          <a class="dropdown-item" href="#">권태양_HW3</a>
+                      </div>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link disabled" href="review.html" tabindex="-1" aria-disabled="true">Other</a>
+                    </li>
+                  </ul>
+                  <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                  </form>
+                </div>
+              </nav>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>데이터시각화 HW4 review data</title>
+  </head>
+<div class="container">
+      <div class="row">
+       <style>
+body {
+  font: 10px sans-serif;
+  shape-rendering: crispEdges;
+}
+.day {
+  fill: #fff;
+  stroke: #ccc;
+}
+.month {
+  fill: none;
+  stroke: #000;
+  stroke-width: 2px;
+}
+.RdYlGn .q0-11{fill:rgb(165,0,38)}
+.RdYlGn .q1-11{fill:rgb(215,48,39)}
+.RdYlGn .q2-11{fill:rgb(244,109,67)}
+.RdYlGn .q3-11{fill:rgb(253,174,97)}
+.RdYlGn .q4-11{fill:rgb(254,224,139)}
+.RdYlGn .q5-11{fill:rgb(255,255,191)}
+.RdYlGn .q6-11{fill:rgb(217,239,139)}
+.RdYlGn .q7-11{fill:rgb(166,217,106)}
+.RdYlGn .q8-11{fill:rgb(102,189,99)}
+.RdYlGn .q9-11{fill:rgb(26,152,80)}
+.RdYlGn .q10-11{fill:rgb(0,104,55)}
+</style>
+<body>
+<script src="http://d3js.org/d3.v4.min.js"></script>
+<script>
+var width = 960,
+    height = 136,
+    cellSize = 17; // cell size
+
+var percent = d3.format(".1%"),
+    format = d3.timeFormat("%Y-%m-%d");
+
+var color = d3.scaleQuantize()
+    .domain([-.05, .05])
+    .range(d3.range(11).map(function(d) { return "q" + d + "-11"; }));
+
+var svg = d3.select("body").selectAll("svg")
+    .data(d3.range(2015, 2019))
+  .enter().append("svg")
+    .attr("width", width)
+    .attr("height", height)
+    .attr("class", "RdYlGn")
+  .append("g")
+    .attr("transform", "translate(" + ((width - cellSize * 53) / 2) + "," + (height - cellSize * 7 - 1) + ")");
+svg.append("text")
+    .attr("transform", "translate(-6," + cellSize * 3.5 + ")rotate(-90)")
+    .style("text-anchor", "middle")
+    .text(function(d) { return d; });
+var rect = svg.selectAll(".day")
+    .data(function(d) { return d3.timeDays(new Date(d, 0, 1), new Date(d + 1, 0, 1)); })
+  .enter().append("rect")
+    .attr("class", "day")
+    .attr("width", cellSize)
+    .attr("height", cellSize)
+    .attr("x", function(d) { return d3.timeWeek.count(d3.timeYear(d),d) * cellSize; })
+    .attr("y", function(d) { return d.getDay() * cellSize; })
+    .datum(format);
+rect.append("title")
+    .text(function(d) { return d; });
+svg.selectAll(".month")
+    .data(function(d) { return d3.timeMonths(new Date(d, 0, 1), new Date(d + 1, 0, 1)); })
+  .enter().append("path")
+    .attr("class", "month")
+    .attr("d", monthPath);
+
+d3.csv("result2.csv", function(error, csv) {
+  if (error) throw error;
+    var data = d3.nest()
+    .key(function(d) { return d.Date; })
+        .rollup(function (d) {
+            return Number(d[0].Open);
+        })
+    .map(csv);
+    rect
+        .filter(function (d) {
+            return data.has(d);
+        })
+        .attr("class", function (d) {
+            return "day " + color(data.get(d)/400);
+        })
+    .select("title")
+        .text(function (d) {
+            return d + ": " + percent(data.get(d)/400);
+        });
+
+    console.log(data);
+});
+
+
+
+
+function monthPath(t0) {
+  var t1 = new Date(t0.getFullYear(), t0.getMonth() + 1, 0),
+      d0 = t0.getDay(), w0 = d3.timeWeek.count(d3.timeYear(t0),t0),
+      d1 = t1.getDay(), w1 = d3.timeWeek.count(d3.timeYear(t1),t1);
+  return "M" + (w0 + 1) * cellSize + "," + d0 * cellSize
+      + "H" + w0 * cellSize + "V" + 7 * cellSize
+      + "H" + w1 * cellSize + "V" + (d1 + 1) * cellSize
+      + "H" + (w1 + 1) * cellSize + "V" + 0
+      + "H" + (w0 + 1) * cellSize + "Z";
+}
+</script>
+      </div>
+</div>
+  <div class="container">
+<a href="review.html" class="btn btn-primary">Back to review</a>
+  </div>
+  <br>
+    <br>
+    <br>
+    <br>
+  </body>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
