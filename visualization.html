@@ -1,0 +1,322 @@
+<!doctype html>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<!--bootstrap environment-->
+<html lang="kr">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/style.css">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="home.html">TrafficData</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        AllProject
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">설민욱_HW2</a>
+                        <a class="dropdown-item" href="#">설민욱_HW3</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">권태양_HW2</a>
+                          <a class="dropdown-item" href="#">권태양_HW3</a>
+                      </div>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link disabled" href="review.html" tabindex="-1" aria-disabled="true">Other</a>
+                    </li>
+                  </ul>
+                  <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                  </form>
+                </div>
+              </nav>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>데이터시각화 HW4 review data</title>
+
+      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+      // Load Charts and the corechart package.
+      google.charts.load('current', {'packages':['corechart']});
+
+      // Draw the pie chart for Sarah's pizza when Charts is loaded.
+      google.charts.setOnLoadCallback(drawSarahChart);
+
+      // Draw the pie chart for the Anthony's pizza when Charts is loaded.
+      google.charts.setOnLoadCallback(drawAnthonyChart);
+
+      // Draw the pie chart for Sa's pizza when Charts is loaded.
+      google.charts.setOnLoadCallback(drawSaChart);
+
+      // Draw the pie chart for the An's pizza when Charts is loaded.
+      google.charts.setOnLoadCallback(drawAnChart);
+
+      // Callback that draws the pie chart for Sarah's pizza.
+      function drawSarahChart() {
+
+        // Create the data table for Sarah's pizza.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Topping');
+        data.addColumn('number', 'Slices');
+        data.addRows([
+          ['대형+건설기계+농기계', 740],
+          ['경형', 299],
+          ['중형', 1715],
+          ['소형', 1335],
+          ['원동기장치자전거', 209],
+          ['자전거', 109],
+          ['사발이', 37],
+          ['불명', 6],
+        ]);
+
+        // Set options for Sarah's pie chart.
+        var options = {title:'2015년 차종별 교통사고 발생수 비율',
+                       width:400,
+                       height:300};
+
+        // Instantiate and draw the chart for Sarah's pizza.
+        var chart = new google.visualization.PieChart(document.getElementById('Sarah_chart_div'));
+        chart.draw(data, options);
+      }
+
+      // Callback that draws the pie chart for Anthony's pizza.
+      function drawAnthonyChart() {
+
+        // Create the data table for Anthony's pizza.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Topping');
+        data.addColumn('number', 'Slices');
+        data.addRows([
+          ['화물차+승합차+건설기계+농기계+특수차', 1267],
+          ['이륜차', 402],
+          ['승용차', 1759],
+          ['자전거', 91],
+          ['사륜오토바이(ATV)', 59],
+          ['원동기장치자전거', 68],
+          ['불명', 6],
+          ['개인형이동수단(PM)', 4],
+          ['기타', 1],
+        ]);
+
+        // Set options for Anthony's pie chart.
+        var options = {title:'2018년 차종별 교통사고 발생수 비율',
+                       width:400,
+                       height:300};
+
+        // Instantiate and draw the chart for Anthony's pizza.
+        var chart = new google.visualization.PieChart(document.getElementById('Anthony_chart_div'));
+        chart.draw(data, options);
+
+
+      var chart = new google.visualization.BarChart(document.getElementById('Ann_chart_div'));
+      chart.draw(data, options);
+    }
+
+
+      // Callback that draws the pie chart for Sa's pizza.
+      function drawSaChart() {
+
+        // Create the data table for Sa's pizza.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Topping');
+        data.addColumn('number', 'Slices');
+        data.addRows([
+          ['사망자', 350],
+          ['중상자', 112],
+          ['경상자+부상자', 126]
+        ]);
+
+        // Set options for Sa's pie chart.
+        var options = {title:'2015년 야간시간에 일어난 대형차 교통사고 사상자 유형',
+                       width:400,
+                       height:300};
+
+        // Instantiate and draw the chart for Sa's pizza.
+        var chart = new google.visualization.PieChart(document.getElementById('Sa_chart_div'));
+        chart.draw(data, options);
+      }
+
+      // Callback that draws the pie chart for An's pizza.
+      function drawAnChart() {
+
+        // Create the data table for An's pizza.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Topping');
+        data.addColumn('number', 'Slices');
+        data.addRows([
+          ['사망자', 424],
+          ['중상자', 241],
+          ['경상자+부상자', 185]
+        ]);
+
+        // Set options for An's pie chart.
+        var options = {title:'2015년 주간시간에 일어난 대형차 교통사고 사상자 유형',
+                       width:400,
+                       height:300};
+
+        // Instantiate and draw the chart for An's pizza.
+        var chart = new google.visualization.PieChart(document.getElementById('An_chart_div'));
+        chart.draw(data, options);
+      }
+      // Draw the pie chart for Sad's pizza when Charts is loaded.
+      google.charts.setOnLoadCallback(drawSadChart);
+
+      // Draw the pie chart for the And's pizza when Charts is loaded.
+      google.charts.setOnLoadCallback(drawAndsChart);
+
+      // Callback that draws the pie chart for Sad's pizza.
+      function drawSadChart() {
+
+        // Create the data table for Sad's pizza.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Topping');
+        data.addColumn('number', 'Slices');
+        data.addRows([
+          ['사망자', 487],
+          ['중상자', 117],
+          ['경상자+부상자', 181]
+        ]);
+
+        // Set options for Sad's pie chart.
+        var options = {title:'2018년 야간시간에 일어난 대형차 교통사고 사상자 유형',
+                       width:400,
+                       height:300};
+
+        // Instantiate and draw the chart for Sad's pizza.
+        var chart = new google.visualization.PieChart(document.getElementById('Sad_chart_div'));
+        chart.draw(data, options);
+      }
+
+      // Callback that draws the pie chart for And's pizza.
+      function drawAndsChart() {
+
+        // Create the data table for Ands's pizza.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Topping');
+        data.addColumn('number', 'Slices');
+        data.addRows([
+          ['사망자', 818],
+          ['중상자', 206],
+          ['경상자+부상자', 87]
+        ]);
+
+        // Set options for Ands's pie chart.
+        var options = {title:'2018년 주간시간에 일어난 대형차 교통사고 사상자 유형',
+                       width:400,
+                       height:300};
+
+        // Instantiate and draw the chart for Ands's pizza.
+        var chart = new google.visualization.PieChart(document.getElementById('Ands_chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+
+  </head>
+  <body>
+  <br>
+  <br>
+
+  <div class="container">
+      <!--Table and divs that hold the pie charts-->
+      <div class="row">
+          <div id="container" style="width: 550px; height: 400px; margin: 0 auto"></div>
+      </div>
+      <div class="row">
+          <div class="col">
+              <div id="Sarah_chart_div" style="border: 1px solid #ccc"></div>
+          </div>
+          <div class="col">
+              <div id="Anthony_chart_div" style="border: 1px solid #ccc"></div>
+          </div>
+      </div>
+  </div>
+<script language="JavaScript">
+function drawChart() {
+   // Define the chart to be drawn.
+   var data = google.visualization.arrayToDataTable([
+        ['Year','대형이동수단','중형차','소형','기타'],
+        ['2015', 740, 1715, 299, 1693],
+        ['2018', 1267, 1759, 402, 229]
+      ]);
+
+   var options = {
+      title: '2015,2018년 차종별 교통사고 발생 수',
+      isStacked:true
+   };
+
+   // Instantiate and draw the chart.
+   var chart = new google.visualization.BarChart(document.getElementById('container'));
+   chart.draw(data, options);
+}
+google.charts.setOnLoadCallback(drawChart);
+</script>
+    <br>
+     <br>
+     <br>
+     <br>
+
+<div class="container">
+      <div class="row">
+          <div class="col">
+              <div id="Sa_chart_div" style="border: 1px solid #ccc"></div>
+          </div>
+          <div class="col">
+              <div id="An_chart_div" style="border: 1px solid #ccc"></div>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col">
+              <div id="Sad_chart_div" style="border: 1px solid #ccc"></div>
+          </div>
+          <div class="col">
+              <div id="Ands_chart_div" style="border: 1px solid #ccc"></div>
+          </div>
+      </div>
+    <p>2015년 대형차 교통사고 발생수 : 740번</p>
+    <p>2018년 대형차 교통사고 발생수 : 1267번</p>
+  </div>
+    <br>
+  <div class="container">
+<a href="review.html" class="btn btn-primary">Back to review</a>
+  </div>
+  <br>
+    <br>
+    <br>
+    <br>
+  </body>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

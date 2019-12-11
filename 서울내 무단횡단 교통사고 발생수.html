@@ -1,0 +1,1174 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8' />
+<title>Draw GeoJSON points</title>
+<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.css' rel='stylesheet' />
+<style>
+    body { margin: 0; padding: 0; }
+        #map { position: absolute; top: 0; bottom: 0; width: 100%; };
+</style>
+</head>
+<body>
+<div id='map'></div>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoiYmxvOTA0MCIsImEiOiJjazNlYnh1NnUwMG5vM2NrMTZ0ejhxNndsIn0.EagKcrjvOaX0AOG2aGVRPg';
+var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/light-v10',
+    center: [126.986, 37.541],
+    zoom: 11
+});
+
+map.on('load', function () {
+
+    map.addLayer({
+        "id": "points",
+        "type": "symbol",
+        "source": {
+            "type": "geojson",
+            "data": {
+   "type": "FeatureCollection",
+   "features": [
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  { }
+    },
+    "properties": {
+    "A":"사고년도",
+    "B":"사고유형구분",
+    "C":"시도시군구명",
+    "D":"사고지역위치명",
+    "E":"발생건수"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 127.01704795,37.5736581 ]
+    },
+    "properties": {
+    "A":"2015",
+    "B":"무단횡단",
+    "C":"서울특별시 종로구1",
+    "D":"서울특별시 종로구 창신동(아람보습학원 부근)",
+    "E":"11"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 127.01532571,37.57787117 ]
+    },
+    "properties": {
+    "A":"2015",
+    "B":"무단횡단",
+    "C":"서울특별시 종로구2",
+    "D":"서울특별시 종로구 창신동(창신쌍용아파트 부근)",
+    "E":"5"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 127.00066178,37.57108611 ]
+    },
+    "properties": {
+    "A":"2015",
+    "B":"무단횡단",
+    "C":"서울특별시 중구1",
+    "D":"서울특별시 중구 방산동(종로5가 부근)",
+    "E":"15"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 127.01710227,37.56538213 ]
+    },
+    "properties": {
+    "A":"2015",
+    "B":"무단횡단",
+    "C":"서울특별시 중구2",
+    "D":"서울특별시 중구 신당동(신당역 부근)",
+    "E":"10"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.9796049,37.56391754 ]
+    },
+    "properties": {
+    "A":"2015",
+    "B":"무단횡단",
+    "C":"서울특별시 중구3",
+    "D":"서울특별시 중구 소공동(소공로지하상가 부근)",
+    "E":"8"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 127.07100272,37.54051781 ]
+    },
+    "properties": {
+    "A":"2015",
+    "B":"무단횡단",
+    "C":"서울특별시 광진구1",
+    "D":"서울특별시 광진구 화양동(건대입구역 부근)",
+    "E":"5"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 127.0799211,37.55684034 ]
+    },
+    "properties": {
+    "A":"2015",
+    "B":"무단횡단",
+    "C":"서울특별시 광진구2",
+    "D":"서울특별시 광진구 능동(군자역 부근)",
+    "E":"4"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 127.05620294,37.61157011 ]
+    },
+    "properties": {
+    "A":"2015",
+    "B":"무단횡단",
+    "C":"서울특별시 성북구1",
+    "D":"서울특별시 성북구 장위동(돌곶이역 부근)",
+    "E":"10"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 127.05908473,37.61474829 ]
+    },
+    "properties": {
+    "A":"2015",
+    "B":"무단횡단",
+    "C":"서울특별시 성북구2",
+    "D":"서울특별시 성북구 장위동(한전빌라 부근)",
+    "E":"5"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 127.03077373,37.64271303 ]
+    },
+    "properties": {
+    "A":"2015",
+    "B":"무단횡단",
+    "C":"서울특별시 강북구1",
+    "D":"서울특별시 강북구 수유동(강북구-도봉구경계(4) 부근)",
+    "E":"6"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 127.03690794,37.65220514 ]
+    },
+    "properties": {
+    "A":"2015",
+    "B":"무단횡단",
+    "C":"서울특별시 도봉구1",
+    "D":"서울특별시 도봉구 창동(서영실업 부근)",
+    "E":"9"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 127.06641515,37.64011196 ]
+    },
+    "properties": {
+    "A":"2015",
+    "B":"무단횡단",
+    "C":"서울특별시 노원구1",
+    "D":"서울특별시 노원구 하계동(중계근린공원 부근)",
+    "E":"10"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 127.07071324,37.64556013 ]
+    },
+    "properties": {
+    "A":"2015",
+    "B":"무단횡단",
+    "C":"서울특별시 노원구2",
+    "D":"서울특별시 노원구 하계동(중계1공단 부근)",
+    "E":"4"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.91277272,37.58836386 ]
+    },
+    "properties": {
+    "A":"2015",
+    "B":"무단횡단",
+    "C":"서울특별시 은평구1",
+    "D":"서울특별시 은평구 신사동(증산손칼국수 부근)",
+    "E":"5"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.92692757,37.61403349 ]
+    },
+    "properties": {
+    "A":"2015",
+    "B":"무단횡단",
+    "C":"서울특별시 은평구2",
+    "D":"서울특별시 은평구 대조동(동명여고 부근)",
+    "E":"4"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.96597794,37.56633274 ]
+    },
+    "properties": {
+    "A":"2015",
+    "B":"무단횡단",
+    "C":"서울특별시 서대문구1",
+    "D":"서울특별시 서대문구 냉천동(서대문아트홀_의주로_진출_2 부근)",
+    "E":"7"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.9131375,37.58260681 ]
+    },
+    "properties": {
+    "A":"2015",
+    "B":"무단횡단",
+    "C":"서울특별시 서대문구2",
+    "D":"서울특별시 서대문구 북가좌동(북가좌사거리 부근)",
+    "E":"4"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.94873761,37.55672907 ]
+    },
+    "properties": {
+    "A":"2015",
+    "B":"무단횡단",
+    "C":"서울특별시 마포구1",
+    "D":"서울특별시 마포구 대흥동(21세기토탈웨딩 부근)",
+    "E":"8"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.94986398,37.54432455 ]
+    },
+    "properties": {
+    "A":"2015",
+    "B":"무단횡단",
+    "C":"서울특별시 마포구2",
+    "D":"서울특별시 마포구 공덕동(국민서관앞삼거리 부근)",
+    "E":"6"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.82801489,37.53605149 ]
+    },
+    "properties": {
+    "A":"2015",
+    "B":"무단횡단",
+    "C":"서울특별시 양천구1",
+    "D":"서울특별시 양천구 신월동(신월사거리 부근)",
+    "E":"8"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.86373873,37.53318472 ]
+    },
+    "properties": {
+    "A":"2015",
+    "B":"무단횡단",
+    "C":"서울특별시 양천구2",
+    "D":"서울특별시 양천구 목동(목동사거리 부근)",
+    "E":"6"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.80966792,37.56152521 ]
+    },
+    "properties": {
+    "A":"2015",
+    "B":"무단횡단",
+    "C":"서울특별시 강서구1",
+    "D":"서울특별시 강서구 공항동(신한은행앞 부근)",
+    "E":"6"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.87299117,37.5471606 ]
+    },
+    "properties": {
+    "A":"2015",
+    "B":"무단횡단",
+    "C":"서울특별시 강서구2",
+    "D":"서울특별시 강서구 염창동(국일빌딩앞 부근)",
+    "E":"4"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.89154677,37.48061508 ]
+    },
+    "properties": {
+    "A":"2015",
+    "B":"무단횡단",
+    "C":"서울특별시 구로구1",
+    "D":"서울특별시 구로구 가리봉동(만민중앙교회 부근)",
+    "E":"22"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.88842383,37.50347144 ]
+    },
+    "properties": {
+    "A":"2015",
+    "B":"무단횡단",
+    "C":"서울특별시 구로구2",
+    "D":"서울특별시 구로구 구로동(미래초교_거리공원길_진입 부근)",
+    "E":"5"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.90464141,37.48010019 ]
+    },
+    "properties": {
+    "A":"2015",
+    "B":"무단횡단",
+    "C":"서울특별시 금천구1",
+    "D":"서울특별시 금천구 독산동(구로전화국_남부순환로_진출 부근)",
+    "E":"15"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.90288832,37.46446179 ]
+    },
+    "properties": {
+    "A":"2015",
+    "B":"무단횡단",
+    "C":"서울특별시 금천구2",
+    "D":"서울특별시 금천구 독산동(시흥4동사거리 부근)",
+    "E":"9"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.90248718,37.44873366 ]
+    },
+    "properties": {
+    "A":"2015",
+    "B":"무단횡단",
+    "C":"서울특별시 금천구3",
+    "D":"서울특별시 금천구 시흥동(박미삼거리 부근)",
+    "E":"6"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.89899833,37.45881759 ]
+    },
+    "properties": {
+    "A":"2015",
+    "B":"무단횡단",
+    "C":"서울특별시 금천구4",
+    "D":"서울특별시 금천구 독산동(금천구청입구 부근)",
+    "E":"5"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.90701193,37.51645472 ]
+    },
+    "properties": {
+    "A":"2015",
+    "B":"무단횡단",
+    "C":"서울특별시 영등포구1",
+    "D":"서울특별시 영등포구 영등포동(영등포역 부근)",
+    "E":"14"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.93729548,37.50369854 ]
+    },
+    "properties": {
+    "A":"2015",
+    "B":"무단횡단",
+    "C":"서울특별시 동작구1",
+    "D":"서울특별시 동작구 상도동(교보증권 부근)",
+    "E":"9"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.92822081,37.49974003 ]
+    },
+    "properties": {
+    "A":"2015",
+    "B":"무단횡단",
+    "C":"서울특별시 동작구2",
+    "D":"서울특별시 동작구 대방동(신대방삼거리역 부근)",
+    "E":"7"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.9523184,37.48070717 ]
+    },
+    "properties": {
+    "A":"2015",
+    "B":"무단횡단",
+    "C":"서울특별시 관악구1",
+    "D":"서울특별시 관악구 봉천동(서울대입구역_관악로_진입_2 부근)",
+    "E":"14"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.91573085,37.47761405 ]
+    },
+    "properties": {
+    "A":"2015",
+    "B":"무단횡단",
+    "C":"서울특별시 관악구2",
+    "D":"서울특별시 관악구 신림동(난곡우체국앞 부근)",
+    "E":"6"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 127.03264547,37.48446528 ]
+    },
+    "properties": {
+    "A":"2015",
+    "B":"무단횡단",
+    "C":"서울특별시 서초구1",
+    "D":"서울특별시 서초구 서초동(양재역_남부순환로_진입_2 부근)",
+    "E":"6"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.9890353,37.49230312 ]
+    },
+    "properties": {
+    "A":"2015",
+    "B":"무단횡단",
+    "C":"서울특별시 서초구2",
+    "D":"서울특별시 서초구 방배동(함지박사거리 부근)",
+    "E":"4"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 127.06090104,37.49901433 ]
+    },
+    "properties": {
+    "A":"2015",
+    "B":"무단횡단",
+    "C":"서울특별시 강남구1",
+    "D":"서울특별시 강남구 대치동(은마아파트입구 부근)",
+    "E":"6"
+    }
+  }
+]
+}
+        },
+        "layout": {
+            // get the icon name from the source's "icon" property
+            // concatenate the name to get an icon from the style's sprite sheet
+            "icon-image": ["concat", ["get", "icon"], "-15"],
+            // get the title name from the source's "title" property
+            "text-field": ["get", "E"],
+            "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
+            "text-offset": [0, 0.6],
+            "text-anchor": "top"
+        }
+    });
+
+});
+</script>
+
+</body>
+=======
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8' />
+<title>Draw GeoJSON points</title>
+<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.css' rel='stylesheet' />
+<style>
+    body { margin: 0; padding: 0; }
+        #map { position: absolute; top: 0; bottom: 0; width: 100%; };
+</style>
+</head>
+<body>
+<div id='map'></div>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoiYmxvOTA0MCIsImEiOiJjazNlYnh1NnUwMG5vM2NrMTZ0ejhxNndsIn0.EagKcrjvOaX0AOG2aGVRPg';
+var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/light-v10',
+    center: [126.986, 37.541],
+    zoom: 11
+});
+
+map.on('load', function () {
+
+    map.addLayer({
+        "id": "points",
+        "type": "symbol",
+        "source": {
+            "type": "geojson",
+            "data": {
+   "type": "FeatureCollection",
+   "features": [
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  { }
+    },
+    "properties": {
+    "A":"사고년도",
+    "B":"사고유형구분",
+    "C":"시도시군구명",
+    "D":"사고지역위치명",
+    "E":"발생건수"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 127.01704795,37.5736581 ]
+    },
+    "properties": {
+    "A":"2015",
+    "B":"무단횡단",
+    "C":"서울특별시 종로구1",
+    "D":"서울특별시 종로구 창신동(아람보습학원 부근)",
+    "E":"11"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 127.01532571,37.57787117 ]
+    },
+    "properties": {
+    "A":"2015",
+    "B":"무단횡단",
+    "C":"서울특별시 종로구2",
+    "D":"서울특별시 종로구 창신동(창신쌍용아파트 부근)",
+    "E":"5"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 127.00066178,37.57108611 ]
+    },
+    "properties": {
+    "A":"2015",
+    "B":"무단횡단",
+    "C":"서울특별시 중구1",
+    "D":"서울특별시 중구 방산동(종로5가 부근)",
+    "E":"15"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 127.01710227,37.56538213 ]
+    },
+    "properties": {
+    "A":"2015",
+    "B":"무단횡단",
+    "C":"서울특별시 중구2",
+    "D":"서울특별시 중구 신당동(신당역 부근)",
+    "E":"10"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.9796049,37.56391754 ]
+    },
+    "properties": {
+    "A":"2015",
+    "B":"무단횡단",
+    "C":"서울특별시 중구3",
+    "D":"서울특별시 중구 소공동(소공로지하상가 부근)",
+    "E":"8"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 127.07100272,37.54051781 ]
+    },
+    "properties": {
+    "A":"2015",
+    "B":"무단횡단",
+    "C":"서울특별시 광진구1",
+    "D":"서울특별시 광진구 화양동(건대입구역 부근)",
+    "E":"5"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 127.0799211,37.55684034 ]
+    },
+    "properties": {
+    "A":"2015",
+    "B":"무단횡단",
+    "C":"서울특별시 광진구2",
+    "D":"서울특별시 광진구 능동(군자역 부근)",
+    "E":"4"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 127.05620294,37.61157011 ]
+    },
+    "properties": {
+    "A":"2015",
+    "B":"무단횡단",
+    "C":"서울특별시 성북구1",
+    "D":"서울특별시 성북구 장위동(돌곶이역 부근)",
+    "E":"10"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 127.05908473,37.61474829 ]
+    },
+    "properties": {
+    "A":"2015",
+    "B":"무단횡단",
+    "C":"서울특별시 성북구2",
+    "D":"서울특별시 성북구 장위동(한전빌라 부근)",
+    "E":"5"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 127.03077373,37.64271303 ]
+    },
+    "properties": {
+    "A":"2015",
+    "B":"무단횡단",
+    "C":"서울특별시 강북구1",
+    "D":"서울특별시 강북구 수유동(강북구-도봉구경계(4) 부근)",
+    "E":"6"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 127.03690794,37.65220514 ]
+    },
+    "properties": {
+    "A":"2015",
+    "B":"무단횡단",
+    "C":"서울특별시 도봉구1",
+    "D":"서울특별시 도봉구 창동(서영실업 부근)",
+    "E":"9"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 127.06641515,37.64011196 ]
+    },
+    "properties": {
+    "A":"2015",
+    "B":"무단횡단",
+    "C":"서울특별시 노원구1",
+    "D":"서울특별시 노원구 하계동(중계근린공원 부근)",
+    "E":"10"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 127.07071324,37.64556013 ]
+    },
+    "properties": {
+    "A":"2015",
+    "B":"무단횡단",
+    "C":"서울특별시 노원구2",
+    "D":"서울특별시 노원구 하계동(중계1공단 부근)",
+    "E":"4"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.91277272,37.58836386 ]
+    },
+    "properties": {
+    "A":"2015",
+    "B":"무단횡단",
+    "C":"서울특별시 은평구1",
+    "D":"서울특별시 은평구 신사동(증산손칼국수 부근)",
+    "E":"5"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.92692757,37.61403349 ]
+    },
+    "properties": {
+    "A":"2015",
+    "B":"무단횡단",
+    "C":"서울특별시 은평구2",
+    "D":"서울특별시 은평구 대조동(동명여고 부근)",
+    "E":"4"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.96597794,37.56633274 ]
+    },
+    "properties": {
+    "A":"2015",
+    "B":"무단횡단",
+    "C":"서울특별시 서대문구1",
+    "D":"서울특별시 서대문구 냉천동(서대문아트홀_의주로_진출_2 부근)",
+    "E":"7"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.9131375,37.58260681 ]
+    },
+    "properties": {
+    "A":"2015",
+    "B":"무단횡단",
+    "C":"서울특별시 서대문구2",
+    "D":"서울특별시 서대문구 북가좌동(북가좌사거리 부근)",
+    "E":"4"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.94873761,37.55672907 ]
+    },
+    "properties": {
+    "A":"2015",
+    "B":"무단횡단",
+    "C":"서울특별시 마포구1",
+    "D":"서울특별시 마포구 대흥동(21세기토탈웨딩 부근)",
+    "E":"8"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.94986398,37.54432455 ]
+    },
+    "properties": {
+    "A":"2015",
+    "B":"무단횡단",
+    "C":"서울특별시 마포구2",
+    "D":"서울특별시 마포구 공덕동(국민서관앞삼거리 부근)",
+    "E":"6"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.82801489,37.53605149 ]
+    },
+    "properties": {
+    "A":"2015",
+    "B":"무단횡단",
+    "C":"서울특별시 양천구1",
+    "D":"서울특별시 양천구 신월동(신월사거리 부근)",
+    "E":"8"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.86373873,37.53318472 ]
+    },
+    "properties": {
+    "A":"2015",
+    "B":"무단횡단",
+    "C":"서울특별시 양천구2",
+    "D":"서울특별시 양천구 목동(목동사거리 부근)",
+    "E":"6"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.80966792,37.56152521 ]
+    },
+    "properties": {
+    "A":"2015",
+    "B":"무단횡단",
+    "C":"서울특별시 강서구1",
+    "D":"서울특별시 강서구 공항동(신한은행앞 부근)",
+    "E":"6"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.87299117,37.5471606 ]
+    },
+    "properties": {
+    "A":"2015",
+    "B":"무단횡단",
+    "C":"서울특별시 강서구2",
+    "D":"서울특별시 강서구 염창동(국일빌딩앞 부근)",
+    "E":"4"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.89154677,37.48061508 ]
+    },
+    "properties": {
+    "A":"2015",
+    "B":"무단횡단",
+    "C":"서울특별시 구로구1",
+    "D":"서울특별시 구로구 가리봉동(만민중앙교회 부근)",
+    "E":"22"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.88842383,37.50347144 ]
+    },
+    "properties": {
+    "A":"2015",
+    "B":"무단횡단",
+    "C":"서울특별시 구로구2",
+    "D":"서울특별시 구로구 구로동(미래초교_거리공원길_진입 부근)",
+    "E":"5"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.90464141,37.48010019 ]
+    },
+    "properties": {
+    "A":"2015",
+    "B":"무단횡단",
+    "C":"서울특별시 금천구1",
+    "D":"서울특별시 금천구 독산동(구로전화국_남부순환로_진출 부근)",
+    "E":"15"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.90288832,37.46446179 ]
+    },
+    "properties": {
+    "A":"2015",
+    "B":"무단횡단",
+    "C":"서울특별시 금천구2",
+    "D":"서울특별시 금천구 독산동(시흥4동사거리 부근)",
+    "E":"9"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.90248718,37.44873366 ]
+    },
+    "properties": {
+    "A":"2015",
+    "B":"무단횡단",
+    "C":"서울특별시 금천구3",
+    "D":"서울특별시 금천구 시흥동(박미삼거리 부근)",
+    "E":"6"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.89899833,37.45881759 ]
+    },
+    "properties": {
+    "A":"2015",
+    "B":"무단횡단",
+    "C":"서울특별시 금천구4",
+    "D":"서울특별시 금천구 독산동(금천구청입구 부근)",
+    "E":"5"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.90701193,37.51645472 ]
+    },
+    "properties": {
+    "A":"2015",
+    "B":"무단횡단",
+    "C":"서울특별시 영등포구1",
+    "D":"서울특별시 영등포구 영등포동(영등포역 부근)",
+    "E":"14"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.93729548,37.50369854 ]
+    },
+    "properties": {
+    "A":"2015",
+    "B":"무단횡단",
+    "C":"서울특별시 동작구1",
+    "D":"서울특별시 동작구 상도동(교보증권 부근)",
+    "E":"9"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.92822081,37.49974003 ]
+    },
+    "properties": {
+    "A":"2015",
+    "B":"무단횡단",
+    "C":"서울특별시 동작구2",
+    "D":"서울특별시 동작구 대방동(신대방삼거리역 부근)",
+    "E":"7"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.9523184,37.48070717 ]
+    },
+    "properties": {
+    "A":"2015",
+    "B":"무단횡단",
+    "C":"서울특별시 관악구1",
+    "D":"서울특별시 관악구 봉천동(서울대입구역_관악로_진입_2 부근)",
+    "E":"14"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.91573085,37.47761405 ]
+    },
+    "properties": {
+    "A":"2015",
+    "B":"무단횡단",
+    "C":"서울특별시 관악구2",
+    "D":"서울특별시 관악구 신림동(난곡우체국앞 부근)",
+    "E":"6"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 127.03264547,37.48446528 ]
+    },
+    "properties": {
+    "A":"2015",
+    "B":"무단횡단",
+    "C":"서울특별시 서초구1",
+    "D":"서울특별시 서초구 서초동(양재역_남부순환로_진입_2 부근)",
+    "E":"6"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.9890353,37.49230312 ]
+    },
+    "properties": {
+    "A":"2015",
+    "B":"무단횡단",
+    "C":"서울특별시 서초구2",
+    "D":"서울특별시 서초구 방배동(함지박사거리 부근)",
+    "E":"4"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 127.06090104,37.49901433 ]
+    },
+    "properties": {
+    "A":"2015",
+    "B":"무단횡단",
+    "C":"서울특별시 강남구1",
+    "D":"서울특별시 강남구 대치동(은마아파트입구 부근)",
+    "E":"6"
+    }
+  }
+]
+}
+        },
+        "layout": {
+            // get the icon name from the source's "icon" property
+            // concatenate the name to get an icon from the style's sprite sheet
+            "icon-image": ["concat", ["get", "icon"], "-15"],
+            // get the title name from the source's "title" property
+            "text-field": ["get", "E"],
+            "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
+            "text-offset": [0, 0.6],
+            "text-anchor": "top"
+        }
+    });
+
+});
+</script>
+
+</body>
+>>>>>>> 2d530fa18944e383a96d2fdd9cb0f3233534cb98
+</html>
