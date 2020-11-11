@@ -12,3 +12,5 @@
 5. 그 동안 만들었던 데이터 몇가지 시각화 자료를 보고 review를 진행
 
 해당 프로젝트 링크 : [Go to Link](https://adoring-hopper-1c6a37.netlify.app/)
+
+* 해당 프로젝트는 2019-05에 만들어졌습니다.
