@@ -1,0 +1,6 @@
+{
+    "name":"blogSoul",
+    "scripts": {
+        "start" : "index.html"
+    }
+}
